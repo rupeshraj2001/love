@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Animation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+
+    <div class="mainclass">
+        <!-- First child section with h2 tags -->
+        <div class="child1">
+            <section>
+                <div class="content">
+                  <h2 id="child1Name1"></h2>
+                  <h2 id="child1Name2"></h2>
+                </div>
+            </section>
+        </div>
+
+        <!-- Canvas section -->
+        <div>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <!-- Third child section with h2 tags -->
+        <div class="child3">
+            <section>
+                <div class="content">
+                  <h2 id="child3Name1"></h2>
+                  <h2 id="child3Name2"></h2>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript to enforce compulsory input on page load -->
+    <script>
+        window.onload = function() {
+            let nameChild1, nameChild3;
+            
+            // Loop until a valid name is entered for Child1
+            do {
+                nameChild1 = prompt("Enter your name (Required upto 12 character without space):");
+            } while (!nameChild1); // Keep prompting if name is empty or cancelled
+            
+            // Update the h2 tags in Child1
+            document.getElementById('child1Name1').textContent = nameChild1;
+            document.getElementById('child1Name2').textContent = nameChild1;
+
+            // Loop until a valid name is entered for Child3
+            do {
+                nameChild3 = prompt("Enter your lover name (Required upto 12 character without space):");
+            } while (!nameChild3); // Keep prompting if name is empty or cancelled
+            
+            // Update the h2 tags in Child3
+            document.getElementById('child3Name1').textContent = nameChild3;
+            document.getElementById('child3Name2').textContent = nameChild3;
+        };
+    </script>
+
+    <script src="./script.js"></script>
+</body>
+</html>
